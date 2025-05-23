@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Drag and Drop styles */
+.event-dragging {
+  cursor: grabbing !important;
+  opacity: 0.5;
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.event-draggable {
+  cursor: grab;
+}
+
+.event-draggable:active {
+  cursor: grabbing;
+}
+
+/* Drop target styles */
+.drop-target-valid {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.drop-target-invalid {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+/* Transition styles */
+.calendar-day {
+  transition: all 0.2s ease-in-out;
+}
+
+.calendar-event {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover effects */
+.calendar-event:not(.recurring):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Prevent text selection during drag operations */
+body.dragging {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Special cursor for recurring events */
+body.dragging-recurring * {
+  cursor: copy !important;
+}
+
+/* Improve drag handle appearance */
+[data-rbd-drag-handle-draggable-id] {
+  cursor: grab !important;
+}
+
+[data-rbd-drag-handle-draggable-id]:active {
+  cursor: grabbing !important;
+}
+
+/* Improve drop target appearance */
+[data-rbd-droppable-id] {
+  transition: all 0.2s ease;
+}
+
+/* Improve dragging item appearance */
+[data-rbd-draggable-id][data-rbd-dragging="true"] {
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* Recurring event styles */
+[data-rbd-draggable-id][data-rbd-dragging="true"][data-recurring="true"] {
+  opacity: 0.7;
+  cursor: copy !important;
+}
+
+/* Invalid drop target styles */
+[data-rbd-droppable-id].invalid-drop {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+/* Valid drop target styles */
+[data-rbd-droppable-id].valid-drop {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+}
