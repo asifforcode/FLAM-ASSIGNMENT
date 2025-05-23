@@ -1,31 +1,23 @@
-# React & Tailwind CSS Starter Pack
 
-This is a starter pack for creating React projects with Tailwind CSS configured. It uses React version **18.2** and Tailwind CSS version **3.2**.
+📅 Calendar App
 
-## Usage
+A simple React + Tailwind CSS calendar application.
 
-This starter pack includes a basic setup for using **Tailwind CSS with React**. To start building your own components and styles, follow these steps:
+🔧 Setup & Run Instructions
 
-1. Clone the repository to your local machine.
-    ```sh
-    git clone https://github.com/thepranaygupta/react-tailwind-css-starter-pack.git
-    ```
+1. Clone the repository:
+   git clone https://github.com/asifforcode/FLAM-ASSIGNMENT.git
+   cd FLAM-ASSIGNMENT
 
-1. Install the required packages.
-    ```sh
-    cd react-tailwind-css-starter-pack
-    npm install
-    ```
+2. Install dependencies:
+   npm install
 
-1. Start the development server.
-    ```sh
-    npm start
-    ```
-1. Open the project in your browser at [`http://localhost:3000`](http://localhost:3000) to view your project.
-1. Create your React components and add your styles using Tailwind classes. You can also create new CSS files and import them into your components.
+3. Start the development server:
+   npm start
 
-The project is set up to use `postcss-cli` to process your CSS files. You can add your own `tailwind.config.js` file to customize your Tailwind setup.
+   Visit http://localhost:3000 to view the app.
 
-## Contributing
+📌 Notes
 
-Contributions are welcome! If you have any suggestions or find any issues, please feel free to open an issue or a pull request.
+- Make sure Node.js and npm are installed on your system.
+- Tailwind CSS is already configured via postcss and tailwind.config.js.
